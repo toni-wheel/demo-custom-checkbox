@@ -1,0 +1,36 @@
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.option .default-checkbox {
+  display: none;
+}
+
+.option .checkmark {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.option .checkmark::before {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0081f1;
+}
+
+.option .default-checkbox:checked + .checkmark::before {
+  display: block;
+}
